@@ -4,8 +4,16 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: white;
-    background: linear-gradient(to bottom, #26222A,#19194d,#26222A);
-   overflow-x: hidden;
+    background: linear-gradient(to bottom, #26222A, #19194d, #26222A);
+    overflow-x: hidden;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(100, 100, 100, 1);
+    width: 95%;
+    border-radius: 0;
 }
 
 header {
@@ -33,16 +41,37 @@ nav ul li a {
     text-decoration: none;
 }
 
-footer {
-    background-color: #262626;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
+img {
+    width: 250px;
+    height: 325px;
 }
 
 h2 {
     text-align: center;
+}
+
+.about-pic {
+    display: flex;
+    align-items: center;
+}
+
+.about-pic img {
+    margin-right: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 50px;
+}
+
+.about-description {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+.about-text ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
 }
 
 #projects {
@@ -53,13 +82,9 @@ h2 {
     padding: 20px;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-}
 .project {
     width: 300px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -67,9 +92,9 @@ h2 {
 }
 
 .project img {
-  width: 300px; 
-  height: 250px; 
-  object-fit: cover; 
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
 }
 
 .project:hover {
@@ -77,22 +102,24 @@ h2 {
     background-color: transparent !important;
 }
 
-.project h3, .project p {
+.project h3,
+.project p {
     padding: 0 15px;
 }
 
 .project a {
     display: inline-block;
     padding: 10px 15px;
-    margin: 10px 15px 15px;
+    margin: 10px 13px 13px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    border: 1px solid black;
 }
 
 .project a:hover {
-background-image: linear-gradient(to right, blue, green);
+    background-image: linear-gradient(to right, gray, gray);
 }
 
 .clearfix::after {
@@ -106,16 +133,23 @@ background-image: linear-gradient(to right, blue, green);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #333; 
+    background: #333;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
+footer {
+    background-color: #262626;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
