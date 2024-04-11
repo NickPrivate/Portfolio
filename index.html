@@ -33,31 +33,66 @@
 			I've
 			been on a mission to turn curiosity into expertise. Here's what I'm all about:
 		</p>
+		<br>
+		<section id="about">
+			<div class="about-flex-container">
+				<div class="gallery-container">
+					<div class="gallery">
+						<img id="galleryImage" src="includes/aboutHeadshot.jpg"
+							alt="About Nick">
+					</div>
+					<button id="prevImage" onclick="changeImage(-1)">❮</button>
+					<button id="nextImage" onclick="changeImage(1)">❯</button>
+				</div>
 
-		<section class="about-pic">
-			<!--	<div class="about-pic"> -->
-			<img src="includes/aboutNickPic.jpg" style="width: 250px; height: 325px;">
-			<img src="includes/aboutFullyHacks.JPG" style="width: 350px;height: 250px;">
-
-
-			<div class="about-text">
-				<ul>
-					<li><b>Tech Enthusiast:</b> From software development to computer security
-						research,
-						I'm all in. I love tackling challenges and staying ahead of the curve.
-					<li><b>Builder & Innovator:</b> Whether it’s crafting high-performance gaming
-						PCs or
-						exploring new tech solutions, I thrive on creating and innovating.
-					<li><b>Content Creator & Gamer:</b> Sharing knowledge and engaging with the
-						community
-						is what I do, whether through streams, tutorials, or the competitive
-						gaming scene.
-					<li><b>Fitness:</b> Balancing the digital with the physical, I keep my energy up
-						and focus sharp with regular weightlifting sessions.
-				</ul>
-			</div>
+				<div class="about-text">
+					<ul>
+						<li><b>Tech Enthusiast:</b> From software development to computer
+							security
+							research,
+							I'm all in. I love tackling challenges and staying ahead of the
+							curve.
+						<li><b>Builder & Innovator:</b> Whether it’s crafting high-performance
+							gaming
+							PCs or
+							exploring new tech solutions, I thrive on creating and
+							innovating.
+						<li><b>Content Creator & Gamer:</b> Sharing knowledge and engaging with
+							the
+							community
+							is what I do, whether through streams, tutorials, or the
+							competitive
+							gaming scene.
+						<li><b>Fitness:</b> Balancing the digital with the physical, I keep my
+							energy up
+							and focus sharp with regular weightlifting sessions.
+					</ul>
+				</div>
 		</section>
-		<p class="about-description" style="margin-top: 40px;">What I Stand For: Excellence, innovation, and
+
+		<script>
+			const images = [
+				"includes/aboutHeadshot.jpg",
+				"includes/aboutNickPic.jpg",
+				"includes/aboutFullyHacks.JPG",
+				"includes/aboutHalloween2023.jpg",
+				"includes/aboutSnowy.JPG",
+			];
+			let currentImageIndex = 0;
+
+			function changeImage(direction) {
+				currentImageIndex += direction;
+				if (currentImageIndex >= images.length) {
+					currentImageIndex = 0;
+				} else if (currentImageIndex < 0) {
+					currentImageIndex = images.length - 1;
+				}
+				document.getElementById("galleryImage").src = images[currentImageIndex];
+			}
+		</script>
+
+		<p class="about-description" style="margin-top: 40px;">What I Stand For: Excellence, innovation,
+			and
 			community. I'm here to make a
 			difference through technology, whether it's by enhancing security, improving
 			user experiences, or just making tech more accessible.</p>
@@ -68,7 +103,7 @@
 
 
 
-		<h2 style="margin: 50px;">Projects</h2>
+		<h2 style="margin: 30px;">Projects</h2>
 
 		<section id="projects">
 			<div class="project">
@@ -77,7 +112,8 @@
 				<p> Dynamic workout app designed to provide users relevant
 					workout recommendations for their individual preferences and goals</p>
 				<a href="https://nyn.amyip.net" target="_blank"> View Project</a> | <a
-					href="https://github.com/amyipdev/nyn-fitness" target="_blank"> View Code</a>
+					href="https://github.com/amyipdev/nyn-fitness" target="_blank"> View
+					Code</a>
 			</div>
 
 			<div class="project">
@@ -99,16 +135,19 @@
 				<p>A newer and more intuitive way to learn fundamental Computer Science concepts
 					including Data Structures and Algorithms </p>
 				<a href="https://bettercs.vercel.app/" target="_blank">View Project</a> | <a
-					href="https://github.com/Wizardzaron/bettercs" target="_blank">View Code</a>
+					href="https://github.com/Wizardzaron/bettercs" target="_blank">View
+					Code</a>
 			</div>
 			<div class="project">
 				<img src="includes/WeatherApp.png" alt="Project 4 Screenshot">
 				<h3 style="text-align: center;"> Weather App</h3>
-				<p>Allows users to retrieve real-time weather information for a specific location by
+				<p>Allows users to retrieve real-time weather information for a specific
+					location by
 					making requests to a weather API</p>
 				<a href="https://github.com/NickPrivate/Weather-App/blob/main/README.md"
 					target="_blank">View Project</a> | <a
-					href="https://github.com/NickPrivate/Weather-App" target="_blank">View Code</a>
+					href="https://github.com/NickPrivate/Weather-App" target="_blank">View
+					Code</a>
 			</div>
 		</section>
 		<hr>
