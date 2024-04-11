@@ -4,7 +4,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: white;
-    background: linear-gradient(to bottom, #26222A, #19194d, #26222A);
+
+    background: linear-gradient(to bottom, #253461, #43104E, #253461);
+    /*background: linear-gradient(to bottom, #26222A, #19194d, #26222A);*/
     overflow-x: hidden;
 }
 
@@ -230,8 +232,20 @@ h2 {
     background: #555;
 }
 
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+#contact img {
+    width: 100px;
+    height: auto;
+    margin: 30px;
+}
+
 footer {
-    background-color: #262626;
     color: #fff;
     text-align: center;
     padding: 5px;
