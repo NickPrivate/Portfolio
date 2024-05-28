@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nick Goulart - Portfolio</title>
-	<link rel="stylesheet" href="style.css?v=1.2">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="aboutTabs.css">
 
 </head>
 
@@ -13,26 +14,29 @@
 	<header>
 		<h1>Nick Goulart</h1>
 		<nav>
-			<ul>
-				<li><a href="#about">About Me</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
+			<div class="tabs">
+				<ul>
+					<li><a style="font-size: 26px; margin: 24px;" href="#about">About Me</a></li>
+					<li><a style="font-size: 26px; margin: 24px;" href="#projects">Projects</a></li>
+					<li><a style="font-size: 26px; margin: 24px;" href="#contact">Contact</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 	<main>
 
-
-
 		<section id="about">
 			<hr>
 			<h2 style="margin-top: 30px;">About Me</h2>
-			<p class="about-description">👋 Hey there! I'm Nick, a passionate 3rd-year
+			<h3> 👋 Hey there! </h3>
+			<p class="about-description;" style="line-height: 1.5;">I'm Nick, a passionate
+				3rd-year
 				Computer
 				Science student at Cal
-				State University Fullerton. My journey in tech began at age 12, and ever since,
-				I've
-				been on a mission to turn curiosity into expertise. Here's what I'm all about:
+				State University Fullerton. <br>
+				My journey in tech began at age 12, and ever since,
+				I've been on a mission to turn curiosity into expertise.<br>
+				Here's what I'm all about:
 			</p>
 			<br>
 			<div class="about-flex-container">
@@ -46,27 +50,80 @@
 				</div>
 
 				<div class="about-text">
-					<ul>
-						<li><b>Tech Enthusiast:</b> From software development to computer
-							security
-							research,
-							I'm all in. I love tackling challenges and staying ahead of the
-							curve.
-						<li><b>Builder & Innovator:</b> Whether it’s crafting high-performance
-							gaming
-							PCs or
-							exploring new tech solutions, I thrive on creating and
-							innovating.
-						<li><b>Content Creator & Gamer:</b> Sharing knowledge and engaging with
-							the
-							community
-							is what I do, whether through streams, tutorials, or the
-							competitive
-							gaming scene.
-						<li><b>Fitness:</b> Balancing the digital with the physical, I keep my
-							energy up
-							and focus sharp with regular weightlifting sessions.
-					</ul>
+					<div class="wrapper">
+						<div class="container">
+							<div class="card tabs">
+								<input id="tab-1" type="radio" class="tab tab-selector"
+									checked="checked" name="tab" />
+								<label for="tab-1" class="tab tab-primary">
+									Enthusiast</label>
+								<input id="tab-2" type="radio" class="tab tab-selector"
+									name="tab" />
+								<label for="tab-2"
+									class="tab tab-success">Innovator</label>
+								<input id="tab-3" type="radio" class="tab tab-selector"
+									name="tab" />
+								<label for="tab-3" class="tab tab-default">
+									Creator</label>
+								<input id="tab-4" type="radio" class="tab tab-selector"
+									name="tab" />
+								<label for="tab-4"
+									class="tab tab-warning">Fitness</label>
+								<div class="tabsShadow"></div>
+								<div class="glider"></div>
+								<section class="content">
+									<div class="item" id="content-1">
+										<h2 class="tab-title tab-primary">Tab 1
+										</h2>
+										<p>
+											<span class="numit">1</span>
+											From software development to
+											computer security research, I'm
+											all in. I love tackling
+											challenges and staying ahead of
+											the curve.
+										</p>
+									</div>
+									<div class="item" id="content-2">
+										<h2 class="tab-title tab-success">Tab 2
+										</h2>
+										<p>
+											<span class="numit">2</span>
+											Whether it’s crafting
+											high-performance gaming PCs or
+											exploring new tech solutions, I
+											thrive on creating and
+											innovating.
+										</p>
+									</div>
+									<div class="item" id="content-3">
+										<h2 class="tab-title tab-default">Tab 3
+										</h2>
+										<p>
+											<span class="numit">3</span>
+											Sharing knowledge and engaging
+											with the community is what I do,
+											whether through streams,
+											tutorials, or the competitive
+											gaming scene.
+										</p>
+									</div>
+									<div class="item" id="content-4">
+										<h2 class="tab-title tab-warning">Tab 4
+										</h2>
+										<p>
+											<span class="numit">4</span>
+											Balancing the digital with the
+											physical, I keep my energy up
+											and focus sharp with regular
+											weightlifting sessions.
+										</p>
+									</div>
+								</section>
+
+							</div>
+						</div>
+					</div>
 				</div>
 		</section>
 
@@ -91,13 +148,9 @@
 			}
 		</script>
 
-		<p class="about-description" style="margin-top: 40px;">What I Stand For: Excellence, innovation,
-			and
-			community. I'm here to make a
-			difference through technology, whether it's by enhancing security, improving
-			user experiences, or just making tech more accessible.</p>
 
-		<p class="about-description" ;> Let's connect and explore how we can innovate together!</p>
+		<p class="about-description" ;> Let's connect and explore how we can innovate together!
+		</p>
 		<br>
 		<hr>
 
@@ -109,17 +162,21 @@
 			<div class="project">
 				<img src="includes/NYNFitness.png" alt="Project 1 Screenshot">
 				<h3 style="text-align: center;"> NYN Fitness </h3>
-				<p> Dynamic workout app designed to provide users relevant
-					workout recommendations for their individual preferences and goals</p>
+				<p style="font-size: 18px;"> Dynamic workout app designed to provide users relevant
+					workout recommendations for their individual preferences and
+					goals</p>
 				<a href="https://nyn.amyip.net" target="_blank"> View Project</a> | <a
-					href="https://github.com/amyipdev/nyn-fitness" target="_blank"> View
+					href="https://github.com/amyipdev/nyn-fitness" target="_blank">
+					View
 					Code</a>
 			</div>
 
 			<div class="project">
 				<img src="includes/UniversityDatabase.png" alt="Project 2 Screenshot">
-				<h3 style="text-align: center;">University Database Project</h3>
-				<p>Designed and implemented a database system for a university with custom SQL
+				<h3 style="text-align: center;">University Database</h3>
+				<p style="font-size: 18px;">Designed and implemented a database system for a university
+					with
+					custom SQL
 					queries, increasing data retreval speeds
 				</p>
 				<a href="https://github.com/NickPrivate/University-Database-Project/blob/main/README.md"
@@ -132,16 +189,19 @@
 			<div class="project">
 				<img src="includes/BetterCS.png" alt="Project 3 Screenshot">
 				<h3 style="text-align: center;">Better CS</h3>
-				<p>A newer and more intuitive way to learn fundamental Computer Science concepts
+				<p style="font-size: 18px;">A newer and more intuitive way to learn fundamental Computer
+					Science
+					concepts
 					including Data Structures and Algorithms </p>
-				<a href="https://bettercs.vercel.app/" target="_blank">View Project</a> | <a
-					href="https://github.com/Wizardzaron/bettercs" target="_blank">View
+				<a href="https://bettercs.vercel.app/" target="_blank">View Project</a>
+				| <a href="https://github.com/Wizardzaron/bettercs" target="_blank">View
 					Code</a>
 			</div>
 			<div class="project">
 				<img src="includes/WeatherApp.png" alt="Project 4 Screenshot">
 				<h3 style="text-align: center;"> Weather App</h3>
-				<p>Allows users to retrieve real-time weather information for a specific
+				<p style="font-size: 18px;">Allows users to retrieve real-time weather information for a
+					specific
 					location by
 					making requests to a weather API</p>
 				<a href="https://github.com/NickPrivate/Weather-App/blob/main/README.md"
