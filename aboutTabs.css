@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spectral:wght@200;300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Merriweather:wght@300;400;700;900&display=swap");
 
 body {
     padding: 0;
@@ -133,14 +133,14 @@ body {
     background: #333;
     box-shadow: 1px 1px 2px 1px #231f20;
     text-transform: uppercase;
-    font-weight: 300;
-    font-size: 8pt;
+    font-weight: 800;
+    font-size: 9pt;
     background: #26292c;
     margin-bottom: 0.5px;
     border-radius: 7px 7px 0 0 !important;
     border-top: 1px solid #3b3d3f;
     letter-spacing: 0.1666666667em !important;
-    font-family: "antique-olive" !important;
+    font-family: 'Open Sans', sans-serif !important;
     background: hsl(232deg 6% 17%);
     cursor: pointer;
 }
@@ -177,13 +177,13 @@ body {
 .content p {
     margin: 10px 15px 10px 0;
     letter-spacing: 0.75px;
-    font-size: 14pt;
+    font-size: 18pt;
     font-style: normal;
     color: #f0f2fc;
     line-height: 30px;
     margin-top: 10pt;
-    font-family: "freight-display-pro";
-    font-weight: 300 !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500 !important;
 }
 
 h2.tab-title.tab-warning,
@@ -301,7 +301,7 @@ label.tab.tab-warning {
 }
 
 span.numit {
-    font-size: 12pt;
+    font-size: 22pt;
     font-family: "muli";
     font-weight: 600;
     text-shadow: 0.5px 0.5px 0.5px #e7e9f5;

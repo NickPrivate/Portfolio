@@ -144,10 +144,12 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
+    background-color: #FFFFFF;
+    color: #333;
+    border: 1px solid #333;
+    border-color: black;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 #prevImage {
@@ -255,6 +257,35 @@ img {
     width: 100px;
     height: auto;
     margin: 30px;
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+}
+
+.svg-container img {
+    object-fit: contain;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#contact a {
+    margin: 10px;
 }
 
 footer {
