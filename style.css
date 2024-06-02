@@ -70,24 +70,11 @@ img {
 }
 
 
-
-
 .tabs li:hover a {
     color: darkgrey;
     text-decoration: underline;
 }
 
-.about-pic {
-    display: flex;
-    align-items: center;
-}
-
-.about-pic img {
-    margin-right: 20px;
-    border: 1px solid white;
-    border-radius: 8px;
-    margin-left: 50px;
-}
 
 .about-description {
     text-align: center;
@@ -104,23 +91,24 @@ img {
 
 .about-flex-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    flex-shrink: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 150px;
 }
 
 .gallery-container {
     position: relative;
-    width: 400px;
-    height: 300px;
+    width: 450px;
+    height: 400px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 8px;
-    margin-left: 250px;
-    margin-top: 25px;
+    margin-left: 120px;
+    margin-top: 15px;
     background-color: transparent;
+    flex-grow: 0;
 }
 
 .gallery {
@@ -131,9 +119,14 @@ img {
     align-items: center;
 }
 
+.gallery-img {
+    width: 300px;
+    height: 400px;
+}
+
 #galleryImage {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 500px;
+    max-height: 420px;
     object-fit: cover;
 
 }
