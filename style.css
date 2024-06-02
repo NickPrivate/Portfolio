@@ -252,6 +252,13 @@ img {
     margin: 30px;
 }
 
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
 .svg-container {
     display: flex;
     justify-content: center;
@@ -259,14 +266,14 @@ img {
     background-color: white;
     border-radius: 20px;
     box-sizing: border-box;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 .svg-container img {
     object-fit: contain;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 80px;
+    min-height: 80px;
 }
 
 #contact {
