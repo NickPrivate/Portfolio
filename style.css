@@ -52,6 +52,11 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
 }
 
 nav ul li {
@@ -61,7 +66,22 @@ nav ul li {
 
 nav ul li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+@media (max-width: 470px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        text-decoration: underline;
+    }
 }
 
 img {
@@ -153,13 +173,74 @@ img {
     right: 10px;
 }
 
+@media (max-width: 1250px) {
+
+    .about-flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        min-width: 100%;
+        min-height: 100%;
+        max-height: 820px;
+        margin: 0 auto;
+    }
+
+    .gallery-container {
+        width: 350px;
+        max-width: 100%;
+        height: 300px;
+        border-radius: 8px;
+        margin-top: 15px;
+        background-color: transparent;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .gallery {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery-img {
+        width: 225px;
+        height: 300px;
+    }
+
+    #galleryImage {
+        max-width: 225px;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    #prevImage,
+    #nextImage {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #FFFFFF;
+        color: #333;
+        border: 1px solid #333;
+        border-color: black;
+        border-radius: 8px;
+        padding: 12px;
+    }
+
+    #prevImage {
+        left: 10px;
+    }
+
+    #nextImage {
+        right: 10px;
+    }
+}
+
 .about-text {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 100px;
-    padding-left: 20px;
 }
 
 #projects {
