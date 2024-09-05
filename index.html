@@ -31,9 +31,9 @@
 			<h2 style="margin-top: 30px;">About Me</h2>
 			<h3> 👋 Hey there! </h3>
 			<p class="about-description;" style="line-height: 1.5;">I'm Nick, a passionate
-				3rd-year
+				4th-year
 				Computer
-				Science undergrad student at Cal
+				Science student at Cal
 				State University Fullerton. <br>
 				My journey in tech began at age 12, and ever since,
 				I've been on a mission to turn curiosity into expertise.<br>
@@ -140,6 +140,12 @@
 			];
 			let currentImageIndex = 0;
 
+			const preloadedImages = images.map((src) => {
+				const img = new Image();
+				img.src = src;
+				return img;
+			});
+
 			function changeImage(direction) {
 				currentImageIndex += direction;
 				if (currentImageIndex >= images.length) {
@@ -152,8 +158,6 @@
 		</script>
 
 
-		<h3 style="margin-top: 90px;"> Let's connect and explore how we can innovate together!
-		</h3>
 		<br>
 		<hr>
 
@@ -161,6 +165,8 @@
 
 		<h2 style="margin: 30px;">Projects</h2>
 
+		<h3 style="margin-top: 30px;"> Check out some of the projects I have worked on
+		</h3>
 		<section id="projects">
 			<div class="project">
 				<img src="includes/NYNFitness.png" alt="Project 1 Screenshot">
@@ -211,9 +217,13 @@
 					href="https://github.com/NickPrivate/Secure-File-Sharing" target="_blank">View
 					Code</a>
 			</div>
+
 		</section>
 		<hr>
 		<h2 style="margin-top: 30px;">Contact</h2>
+
+		<h3 style="margin-top: 10px;"> Let's connect and explore how we can innovate together!
+		</h3>
 		<section id="contact">
 			<div class="contact-container">
 				<a href="mailto:Nick.Goulart30@gmail.com" target="_blank" rel="noopener noreferrer">
