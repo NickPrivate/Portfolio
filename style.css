@@ -75,7 +75,7 @@ nav ul li {
 }
 
 .tabs li:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .tabs li:hover a {
@@ -361,6 +361,12 @@ img {
     align-items: center;
     background-color: transparent;
 }
+
+.contact-container :hover {
+    transform: scale(1.02);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
 
 .svg-container {
     display: flex;
