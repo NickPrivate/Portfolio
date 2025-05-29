@@ -266,13 +266,31 @@ img {
 }
 
 #projects {
+    padding: 20px;
+    /*
+    margin-left: 5%;
+    margin-right: 5%;
+    */
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-header h2 {
+    margin: 30px 0 10px 0;
+}
+
+.projects-header h3 {
+    margin: 10px 0 20px 0;
+}
+
+.projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
 }
 
 .project {
@@ -282,6 +300,19 @@ img {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-header h2 {
+    margin: 30px 0 10px 0; /* Adjust as needed */
+}
+
+.projects-header h3 {
+    margin: 10px 0 20px 0;
 }
 
 .project img {
