@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/x-icon" href="includes/contactIcons/favicon_io/favicon.ico">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="aboutTabs.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,14 +26,13 @@
 	</header>
 	<main>
 
-		<section id="about">
+		<section id="about" data-aos="fade-up">
 			<hr>
 			<h2 style="margin-top: 30px;">About Me</h2>
 			<h3> 👋 Hey there! </h3>
 			<p class="about-description;" style="line-height: 1.5;">I'm Nick, a passionate
-				4th-year
-				Computer
-				Science student at Cal
+				New Grad Computer
+				Science student from Cal
 				State University Fullerton. <br>
 				My journey in tech began at age 12, and ever since,
 				I've been on a mission to turn curiosity into expertise.<br>
@@ -133,12 +132,11 @@
 		<script>
 			const images = [
 				"includes/aboutHeadshot2024.jpg",
-                "includes/aboutPresentation.jpg",
+				"includes/aboutPresentationECS.jpg",
+				"includes/aboutCommencement.jpg",
 				"includes/aboutNickPic.jpg",
 				"includes/aboutWaterboarding.jpg",
-				"includes/aboutFullyHacks.JPG",
-				"includes/aboutHalloween2023.jpg",
-
+                "includes/aboutPresentation.jpg",
 			];
 			let currentImageIndex = 0;
 
@@ -169,15 +167,28 @@
 
 		<h3 style="margin-top: 30px;"> Check out some of the projects I have worked on
 		</h3>
-		<section id="projects">
+		<section id="projects" data-aos="fade-up">
+			<div class="project">
+				<img src="includes/CapstoneProj.png" alt="Project Screenshot Missing">
+				<h3 style="text-align: center;">Signal Automation using ML</h3>
+                <p style="font-size: 18px;">Designed and implemented a multi-process automated signal classification system w/ machine learning for RTX.
+                </p>
+                <div class="view-materials">
+				<a href="https://www.youtube.com/watch?v=9-c0zTYUFcQ_blank">View Demo</a>
+				| <a href="https://github.com/NickPrivate/Content-Generation-V1" target="_blank">View
+					Code</a>
+                </div>
+			</div>
 
 			<div class="project">
 				<img src="includes/AIContentGen.png" alt="Project Screenshot Missing">
 				<h3 style="text-align: center;">AI Content Generation</h3>
                 <p style="font-size: 18px;">An open-source system for generating engaging short-form videos, leveraging cutting-edge machine learning models.</p>
+                <div class="view-materials">
 				<a href="https://www.youtube.com/watch?v=S5rRD_GUeGE" target="_blank">View Demo</a>
 				| <a href="https://github.com/NickPrivate/Content-Generation-V1" target="_blank">View
 					Code</a>
+                </div>
 			</div>
 
 			<div class="project">
@@ -186,9 +197,11 @@
 				<p style="font-size: 18px;"> Dynamic workout app designed to provide users relevant
 					workout recommendations for their individual preferences and
 					goals.</p>
+                <div class="view-materials">
 				<a href="https://nyn.amyip.net" target="_blank">View Website</a> | <a
 					href="https://github.com/amyipdev/nyn-fitness" target="_blank">
 					View Code</a>
+			</div>
 			</div>
 
 			<div class="project">
@@ -197,10 +210,12 @@
 				<p style="font-size: 18px;">Securely transfer files by utilizing custom cryptographic
 					protocols. RSA/DSA for digital signature and AES for file
 					transmission.</p>
+                <div class="view-materials">
 				<a href="https://youtu.be/_aTffDwL2p8?t=240"
 					target="_blank">View Demo</a> | <a
 					href="https://github.com/NickPrivate/Secure-File-Sharing" target="_blank">View
 					Code</a>
+			</div>
 			</div>
 
 			<div class="project">
@@ -209,6 +224,8 @@
 				<p style="font-size: 18px;">Designed and implemented a database system for a university
 					with optimized SQL queries, increasing data retreval speeds.
 				</p>
+
+                <div class="view-materials">
 				<a href="https://github.com/NickPrivate/University-Database-Project/blob/main/README.md"
 					target="_blank">View
 					Project</a> | <a
@@ -216,13 +233,14 @@
 					target="_blank">View
 					Code</a>
 			</div>
+			</div>
 		</section>
 		<hr>
 		<h2 style="margin-top: 30px;">Contact</h2>
 
 		<h3 style="margin-top: 10px;"> Let's connect and explore how we can innovate together!
 		</h3>
-		<section id="contact">
+		<section id="contact" data-aos="fade-up">
 			<div class="contact-container">
 				<a href="mailto:Nick.Goulart30@gmail.com" target="_blank" rel="noopener noreferrer">
 					<div class="svg-container">
@@ -248,10 +266,19 @@
 	</main>
 	<hr>
 	<footer>
-		<div>© 2024 Nick Goulart All rights reserved.</div>
+		<div>© 2025 Nick Goulart All rights reserved.</div>
 	</footer>
 
 	<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+<script>
+    AOS.init({
+        duration: 1000,    // Animation duration (ms)
+        easing: 'ease-in-out', // Optional easing
+        once: true          // Animate only once when scrolled into view
+    });
+</script>
 </body>
 
 </html>

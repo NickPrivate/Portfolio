@@ -271,10 +271,12 @@ img {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .project {
-    width: 300px;
+    width: 400px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -283,8 +285,8 @@ img {
 }
 
 .project img {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -293,12 +295,17 @@ img {
     background-color: transparent !important;
 }
 
-.project h3,
+.project h3 {
+    text-align: center;
+    margin-top: 10px;    /* Adjust this to control space above title */
+    margin-bottom: 0px; /* Adjust this to control space below title */
+}
 .project p {
     padding: 0 15px;
 }
 
 .project a {
+    align-content: center;
     display: inline-block;
     padding: 10px 15px;
     margin: 10px 13px 13px;
@@ -316,6 +323,23 @@ img {
     background-image: linear-gradient(45deg, #ff4b2b, #ff416c);
     transform: scale(1.05);
     border: 1px solid white;
+}
+
+.project .view-materials {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project .view-materials a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .clearfix::after {
