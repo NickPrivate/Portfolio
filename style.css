@@ -267,10 +267,25 @@ img {
 
 #projects {
     padding: 20px;
-    /*
-    margin-left: 5%;
-    margin-right: 5%;
-    */
+    max-width: 100%; /* Full width by default */
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    #projects {
+        max-width: 80%; /* 20% margin on left and right */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Stack projects vertically */
+        gap: 10px; /* Reduce gap for mobile */
+    }
+
+    .project {
+        width: 100%; /* Full width on mobile */
+    }
 }
 
 .projects-header {
@@ -292,27 +307,19 @@ img {
     justify-content: center;
     gap: 20px;
 }
-
 .project {
     width: 400px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
-.projects-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.projects-header h2 {
-    margin: 30px 0 10px 0; /* Adjust as needed */
-}
-
-.projects-header h3 {
-    margin: 10px 0 20px 0;
+.project:hover {
+    transform: translateY(-7px) !important; /* Override AOS inline style */
+    background-color: transparent;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project img {
@@ -321,22 +328,22 @@ img {
     object-fit: cover;
 }
 
-.project:hover {
-    transform: translateY(-7px);
-    background-color: transparent !important;
-}
-
 .project h3 {
     text-align: center;
-    margin-top: 10px;    /* Adjust this to control space above title */
-    margin-bottom: 0px; /* Adjust this to control space below title */
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
+
 .project p {
     padding: 0 15px;
 }
 
+.project .view-materials {
+    text-align: center;
+    margin-top: 10px;
+}
+
 .project a {
-    align-content: center;
     display: inline-block;
     padding: 10px 15px;
     margin: 10px 13px 13px;
@@ -346,7 +353,6 @@ img {
     border-radius: 20px;
     border: 1px solid transparent;
     transition: background-color 0.3s ease, transform 0.3s ease;
-
 }
 
 .project a:hover {
@@ -354,23 +360,6 @@ img {
     background-image: linear-gradient(45deg, #ff4b2b, #ff416c);
     transform: scale(1.05);
     border: 1px solid white;
-}
-
-.project .view-materials {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.project .view-materials a {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px;
-    border: 1px solid transparent;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .clearfix::after {
