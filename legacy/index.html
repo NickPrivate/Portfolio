@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nick Goulart</title>
+	<link rel="icon" type="image/x-icon" href="includes/contactIcons/favicon_io/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="aboutTabs.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>Nick Goulart</h1>
+		<nav>
+			<div class="tabs">
+				<ul>
+					<li><a style="font-size: 26px; margin: 10px;" href="#about">About Me</a></li>
+					<li><a style="font-size: 26px; margin: 10px;" href="#projects">Projects</a></li>
+					<li><a style="font-size: 26px; margin: 10px;" href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+
+		<hr>
+        <section id="about" data-aos="zoom-in">
+			<h2 style="margin-top: 30px;">About Me</h2>
+			<h3> 👋 Hey there! </h3>
+			<p class="about-description;" style="line-height: 1.5;">I'm Nick, a passionate
+				New Grad Computer
+				Science student from Cal
+				State University Fullerton. <br>
+				My journey in tech began at age 12, and ever since,
+				I've been on a mission to turn curiosity into expertise.<br>
+			</p>
+
+			<h3>Here's what I'm all about:</h3>
+			<br>
+			<div class="about-flex-container">
+				<div class="gallery-container">
+					<div class="gallery">
+						<img id="galleryImage" class="gallery-img" style="border-radius: 10px;"
+							src="includes/aboutHeadshot2024.jpg" alt="About Nick">
+					</div>
+					<button id="prevImage" onclick="changeImage(-1)">❮</button>
+					<button id="nextImage" onclick="changeImage(1)">❯</button>
+				</div>
+
+				<div class="about-text">
+					<div class="wrapper">
+						<div class="container">
+							<div class="card tabs">
+								<input id="tab-1" type="radio" class="tab tab-selector"
+									checked="checked" name="tab" />
+								<label for="tab-1" class="tab tab-primary">
+									Enthusiast</label>
+								<input id="tab-2" type="radio" class="tab tab-selector"
+									name="tab" />
+								<label for="tab-2"
+									class="tab tab-success">Innovator</label>
+								<input id="tab-3" type="radio" class="tab tab-selector"
+									name="tab" />
+								<label for="tab-3" class="tab tab-default">
+									Creator</label>
+								<input id="tab-4" type="radio" class="tab tab-selector"
+									name="tab" />
+								<label for="tab-4"
+									class="tab tab-warning">Fitness</label>
+								<div class="tabsShadow"></div>
+								<div class="glider"></div>
+								<section class="content">
+									<div class="item" id="content-1">
+										<h2 class="tab-title tab-primary">Tenet
+											1
+										</h2>
+										<p>
+											From software development to
+											computer security research, I'm
+											all in. I love tackling
+											challenges and staying ahead of
+											the curve.
+										</p>
+									</div>
+									<div class="item" id="content-2">
+										<h2 class="tab-title tab-success">Tenet
+											2
+										</h2>
+										<p>
+											Whether it’s crafting
+											high-performance gaming PCs or
+											exploring new tech solutions, I
+											thrive on creating and
+											innovating.
+										</p>
+									</div>
+									<div class="item" id="content-3">
+										<h2 class="tab-title tab-default">Tenet
+											3
+										</h2>
+										<p>
+											Sharing knowledge and engaging
+											with the community is what I do,
+											whether through streams,
+											tutorials, or the competitive
+											gaming scene.
+										</p>
+									</div>
+									<div class="item" id="content-4">
+										<h2 class="tab-title tab-warning">Tenet
+											4
+										</h2>
+										<p>
+											Balancing the digital with the
+											physical, I keep my energy up
+											and focus sharp with regular
+											weightlifting sessions.
+										</p>
+									</div>
+								</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			const images = [
+				"includes/aboutHeadshot2024.jpg",
+				"includes/aboutPresentationECS.jpg",
+				"includes/aboutCommencement.jpg",
+				"includes/aboutNickPic.jpg",
+				"includes/aboutWaterboarding.jpg",
+                "includes/aboutPresentation.jpg",
+			];
+			let currentImageIndex = 0;
+
+			const preloadedImages = images.map((src) => {
+				const img = new Image();
+				img.src = src;
+				return img;
+			});
+
+			function changeImage(direction) {
+				currentImageIndex += direction;
+				if (currentImageIndex >= images.length) {
+					currentImageIndex = 0;
+				} else if (currentImageIndex < 0) {
+					currentImageIndex = images.length - 1;
+				}
+				document.getElementById("galleryImage").src = images[currentImageIndex];
+			}
+		</script>
+		<br>
+
+
+
+    <section id="projects">
+        <div class="projects-header" data-aos="fade-up">
+		<hr>
+            <h2>Projects</h2>
+            <h3>Check out some of the projects I have worked on</h3>
+        </div>
+
+        <div class="projects-container">
+
+        <div class="projects-container">
+            <div data-aos="zoom-in">
+                <div class="project">
+                    <img src="includes/CapstoneProj.png" alt="Project Screenshot Missing">
+                    <h3 style="text-align: center;">Signal Automation using ML</h3>
+                    <p style="font-size: 18px;">Designed and implemented a multi-process automated signal classification system w/ machine learning for RTX.</p>
+                    <div class="view-materials">
+                        <a href="https://www.youtube.com/watch?v=9-c0zTYUFcQ_blank" target="_blank">View Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in">
+                <div class="project">
+                    <img src="includes/AIContentGen.png" alt="Project Screenshot Missing">
+                    <h3 style="text-align: center;">AI Content Generation</h3>
+                    <p style="font-size: 18px;">An open-source system for generating engaging short-form videos, leveraging cutting-edge machine learning models.</p>
+                    <div class="view-materials">
+                        <a href="https://www.youtube.com/watch?v=S5rRD_GUeGE" target="_blank">View Demo</a>
+                        <a href="https://github.com/NickPrivate/Content-Generation-V1" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in">
+                <div class="project">
+                    <img src="includes/NYNFitness.png" alt="Project Screenshot Missing">
+                    <h3 style="text-align: center;">NYN Fitness</h3>
+                    <p style="font-size: 18px;">Dynamic workout app designed to provide users relevant workout recommendations for their individual preferences and goals.</p>
+                    <div class="view-materials">
+                        <a href="https://nyn.amyip.net" target="_blank">View Website</a>
+                        <a href="https://github.com/amyipdev/nyn-fitness" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in">
+                <div class="project">
+                    <img src="includes/SecureFileSharing.png" alt="Project Screenshot Missing">
+                    <h3 style="text-align: center;">Secure File Sharing</h3>
+                    <p style="font-size: 18px;">Securely transfer files by utilizing custom cryptographic protocols. RSA/DSA for digital signature and AES for file transmission.</p>
+                    <div class="view-materials">
+                        <a href="https://youtu.be/_aTffDwL2p8?t=240" target="_blank">View Demo</a>
+                        <a href="https://github.com/NickPrivate/Secure-File-Sharing" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in">
+                <div class="project">
+                    <img src="includes/UniversityDatabase.png" alt="Project Screenshot Missing">
+                    <h3 style="text-align: center;">University Database</h3>
+                    <p style="font-size: 18px;">Designed and implemented a database system for a university with optimized SQL queries, increasing data retrieval speeds.</p>
+                    <div class="view-materials">
+                        <a href="https://github.com/NickPrivate/University-Database-Project/blob/main/README.md" target="_blank">View Project</a>
+                        <a href="https://github.com/NickPrivate/University-Database-Project" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in">
+                <div class="project">
+                    <img src="includes/PortfolioWebsite.png" alt="Project Screenshot Missing">
+                    <h3 style="text-align: center;">My Portfolio Website</h3>
+                    <p style="font-size: 18px;">Check out my Portfolio on GitHub. This webpage is being hosted for free with Vercel. Created with vanilla HTML, CSS, and JS.</p>
+                    <div class="view-materials">
+                        <a href="https://github.com/NickPrivate/Portfolio" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of projects-container -->
+
+        </div> <!-- End of projects-container -->
+    </section>
+            <hr>
+            <h2 style="margin-top: 30px;">Contact</h2>
+
+            <h3 style="margin-top: 10px;"> Let's connect and explore how we can innovate together!
+            </h3>
+            <section id="contact" data-aos="fade-up">
+                <div class="contact-container">
+                    <a href="mailto:Nick.Goulart30@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <div class="svg-container">
+                            <img src="includes/contactIcons/iconmonstr-email-2.svg"
+                                alt="Email Icon">
+                        </div>
+                    </a>
+                    <a href="https://github.com/nickprivate" target="_blank" rel="noopener noreferrer">
+                        <div class="svg-container">
+                            <img src="includes/contactIcons/iconmonstr-github-3.svg"
+                                alt="GitHub Icon">
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/nickgoulart" target="_blank" rel="noopener noreferrer">
+                        <div class="svg-container">
+                            <img src="includes/contactIcons/iconmonstr-linkedin-3.svg"
+                                alt="LinkedIn Icon">
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+	</main>
+	<hr>
+	<footer>
+		<div>© 2025 Nick Goulart All rights reserved.</div>
+	</footer>
+
+	<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS JS -->
+<script>
+    AOS.init({
+        duration: 1000,    // Animation duration (ms)
+        easing: 'ease-in-out', // Optional easing
+        once: true          // Animate only once when scrolled into view
+    });
+</script>
+</body>
+
+</html>
