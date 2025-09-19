@@ -15,34 +15,35 @@ const images = [
 
 const tabData = [
   {
-    id: 'enthusiast',
-    label: 'Enthusiast',
-    title: 'Tech Enthusiast',
-    content: 'From software development to computer security research, I\'m all in. I love tackling challenges and staying ahead of the curve.',
+    id: 'engineer',
+    label: 'Engineer',
+    title: 'Software Engineer',
+    content: 'I design and build systems with a focus on AI, automation, and backend development. My projects include signal classification, workflow automation with n8n, and cloud deployments on AWS.',
     icon: '💻'
   },
   {
-    id: 'innovator',
-    label: 'Innovator',
-    title: 'Creative Innovator',
-    content: 'Whether it\'s crafting high-performance gaming PCs or exploring new tech solutions, I thrive on creating and innovating.',
-    icon: '🚀'
+    id: 'builder',
+    label: 'Builder',
+    title: 'Problem Solver',
+    content: 'I enjoy turning ideas into working solutions. Examples include developing machine learning models, creating custom APIs, and optimizing algorithms for performance and scalability.',
+    icon: '⚙️'
   },
   {
-    id: 'creator',
-    label: 'Creator',
-    title: 'Community Creator',
-    content: 'Sharing knowledge and engaging with the community is what I do, whether through streams, tutorials, or the competitive gaming scene.',
-    icon: '🎮'
+    id: 'learner',
+    label: 'Learner',
+    title: 'Continuous Learner',
+    content: 'I push myself to stay current with new technologies through certifications, side projects, and consistent practice in data structures and algorithms.',
+    icon: '📖'
   },
   {
     id: 'fitness',
     label: 'Fitness',
-    title: 'Fitness Focused',
-    content: 'Balancing the digital with the physical, I keep my energy up and focus sharp with regular weightlifting sessions.',
-    icon: '💪'
+    title: 'Health and Discipline',
+    content: 'Outside of technology, I practice weightlifting and endurance training. Fitness builds the discipline and focus that I carry into my work.',
+    icon: '🏋️'
   }
 ];
+
 
 export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -63,6 +64,9 @@ export default function About() {
   };
 
   const activeTabData = tabData.find(tab => tab.id === activeTab) || tabData[0];
+  const imagePositions: Record<number, string> = {
+    3: 'object-[center_20%]', // Nick pic nudged up
+  };
 
 
   return (
@@ -86,15 +90,20 @@ export default function About() {
           {/* Image Gallery */}
           <div className="relative">
             <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-white/10">
+            {images.map((src, index) => (
               <Image
-                src={images[currentImageIndex]}
-                alt={`About Nick - Image ${currentImageIndex + 1}`}
+                key={src}
+                src={src}
+                alt={`About Nick - Image ${index + 1}`}
                 fill
-                className="object-cover transition-opacity duration-500"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+                className={`object-cover ${imagePositions[index] || 'object-center'} ${
+                  index === currentImageIndex ? 'block' : 'hidden'
+                }`}
               />
+            ))}
             </div>
-            
+
             {/* Navigation Arrows */}
             <button
               onClick={() => changeImage(-1)}
