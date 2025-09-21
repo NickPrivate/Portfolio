@@ -25,7 +25,7 @@ const tabData = [
     id: 'builder',
     label: 'Builder',
     title: 'Problem Solver',
-    content: 'I enjoy turning ideas into working solutions. Examples include developing machine learning models, creating custom APIs, and optimizing algorithms for performance and scalability.',
+    content: 'I enjoy turning ideas into working solutions. From developing machine learning models, creating custom APIs, and optimizing algorithms for performance and scalability.',
     icon: '⚙️'
   },
   {
@@ -47,7 +47,7 @@ const tabData = [
 
 export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState('enthusiast');
+  const [activeTab, setActiveTab] = useState('engineer');
   const aboutRef = useScrollReveal();
 
   const changeImage = (direction: number) => {
@@ -73,14 +73,14 @@ export default function About() {
     <section 
       ref={aboutRef}
       id="about" 
-      className="py-24 about-gradient mesh-overlay bg-depth relative reveal"
+      className="py-24 bg-gradient-to-b from-slate-900 to-slate-800 relative"
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             About Me
           </h2>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             I'm Nick, a passionate New Grad Computer Science student from Cal State University Fullerton. 
             My journey in tech began at age 12, and ever since, I've been on a mission to turn curiosity into expertise.
           </p>

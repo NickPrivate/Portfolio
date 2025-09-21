@@ -73,7 +73,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-900">
+    <section id="contact" className="py-24 bg-gradient-to-b from-slate-900 to-black relative">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -87,36 +87,36 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {contactLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-gray-800 rounded-2xl p-8 text-center hover:bg-gray-700 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-gray-600"
-            >
-              <div className="bg-white rounded-xl p-4 w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Image
-                  src={link.icon}
-                  alt={link.alt}
-                  width={32}
-                  height={32}
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {link.name}
-              </h3>
-              <p className="text-gray-400 text-sm">{link.description}</p>
-            </a>
-          ))}
-        </div>
+        <div className="mt-16 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+          {/* Left column: Contact Links */}
+          <div className="flex flex-col space-y-14">
+            {contactLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1 border border-gray-700 hover:border-gray-600"
+              >
+                <div className="bg-white rounded-xl p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src={link.icon}
+                    alt={link.alt}
+                    width={32}
+                    height={32}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-1">
+                  {link.name}
+                </h3>
+                <p className="text-gray-400 text-sm">{link.description}</p>
+              </a>
+            ))}
+          </div>
 
-        {/* Contact Form */}
-        <div className="text-center mt-16">
-          <div className="bg-gray-800 rounded-2xl p-8 max-w-2xl mx-auto border border-gray-700">
+          {/* Right column: Contact Form */}
+          <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
             <h3 className="text-2xl font-semibold text-white mb-4">
               Ready to work together?
             </h3>
@@ -131,7 +131,7 @@ export default function Contact() {
                   htmlFor="name"
                   className="block text-gray-300 mb-2 font-medium"
                 >
-                  Name
+                  Full Name
                 </label>
                 <input
                   type="text"
@@ -186,6 +186,9 @@ export default function Contact() {
                 className="w-full flex justify-center items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50"
               >
                 {loading ? "Sending..." : "Send Message"}
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </button>
             </form>
 

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nick Goulart - Computer Science Student & Developer",
+  title: "Nick Goulart - Portfolio",
   description: "Portfolio of Nick Goulart, a passionate Computer Science student from Cal State University Fullerton. Explore my projects in AI, machine learning, web development, and more.",
   keywords: ["Nick Goulart", "Computer Science", "Portfolio", "Developer", "AI", "Machine Learning", "Web Development"],
   authors: [{ name: "Nick Goulart" }],
