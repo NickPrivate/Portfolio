@@ -77,7 +77,7 @@ export default function Hero() {
               Nick Goulart
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Computer Science Student & Developer
+              Computer Science Graduate & Developer
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
               Passionate about turning curiosity into expertise. From software development to computer security research, 
